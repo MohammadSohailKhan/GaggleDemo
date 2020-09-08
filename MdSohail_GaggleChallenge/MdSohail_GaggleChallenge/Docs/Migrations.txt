@@ -1,0 +1,15 @@
+﻿================================NHLDbContext==========================================================
+
+Enable-Migrations -ContextTypeName NhlContext -MigrationsDirectory  Migrations\NHL
+
+add-Migration -ConfigurationTypeName MdSohail_GaggleChallenge.Migrations.NHL.Configuration "InitialCreate"
+
+update-database -ConfigurationTypeName MdSohail_GaggleChallenge.Migrations.NHL.Configuration
+
+================================ApplicationDbContext==========================================================
+
+Enable-Migrations -ContextTypeName ApplicationDbContext -MigrationsDirectory  Migrations\Identity
+
+add-Migration -ConfigurationTypeName MdSohail_GaggleChallenge.Migrations.Identity.Configuration "InitialIdentity"
+
+update-database -ConfigurationTypeName  MdSohail_GaggleChallenge.Migrations.Identity.Configuration
